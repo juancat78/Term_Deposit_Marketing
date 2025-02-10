@@ -25,10 +25,13 @@ We are also interested in finding customers who are more likely to buy the inves
 
 What makes the customers buy? Tell us which feature we should be focusing more on.
 
+REPORT 
 1. Data Cleaning and Missing Value Handling
+
 A thorough analysis confirmed that none of the original variables contained missing values.
 
 2. Data Preprocessing
+   
 •	Feature Encoding:
 o	Label Encoding was applied to nominal categorical variables.
 o	One-Hot Encoding was used for ordinal categorical variables.
@@ -40,10 +43,12 @@ o	The Synthetic Minority Over-sampling Technique (SMOTE) was implemented to bala
 o	The minority class (y=1, indicating subscription) was highly underrepresented, so we performed upsampling to generate X_smote and y_smote.
 
 3. Exploratory Data Analysis (EDA)
+   
 •	A univariate analysis was conducted using boxplots and histograms to guide the selection of appropriate scaling techniques.
 •	The target variable (y) showed strong linear correlation only with the duration feature.
 
 4. Machine Learning Models
+   
 Several classification algorithms were tested, including Logistic Regression (4.1.1, 4.1.2, 4.1.3, 4.1.4) , Decision Trees – CART (4.2.1, 4.2.2 and 4.2.3), K-Nearest Neighbors or KNN (4.3.1 and 4.3.2) , and XGBoost (4.4.1, 4.4.2 and 4.4.3). Models were evaluated under three different scenarios:
 1.	Using X_before_SMOTE, the dataset obtained after encoding and scaling but without applying SMOTE.
 2.	Using X_smote, the dataset obtained after applying SMOTE to balance the target classes.
